@@ -8,7 +8,7 @@ public class Alien {
     private Computer com;
 
     public Alien() {
-        System.out.println("Alien");
+        System.out.println("Alien Constructor");
     }
 
     public int getAge() {
@@ -25,7 +25,7 @@ public class Alien {
 //    }
 
     public  void program(){
-        System.out.println("Coding...");
+        System.out.println("ALien is Coding...");
         com.compile();
 
     }

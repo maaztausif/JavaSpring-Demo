@@ -14,8 +14,12 @@
 
 
         <property name="age" value="2"/>
-        <property name="com" ref="com"/>
+        <property name="com">
 
+        <bean class = "org.example.Desktop" primary="true" lazy-init="true">
+        </bean>
+
+        </property>
 <!--        <property name="age" value="2"> </property>-->
 <!--        <property name="com" value="com1"> </property>-->
 <!--        <constructor-arg name = "lap" ref="lap1"/>-->
@@ -24,12 +28,12 @@
         <!--        <property name="lap" ref="lap1"></property>-->
     </bean>
 
-    <bean id = "com" class = "org.example.Laptop">
+    <bean id = "com1" class = "org.example.Laptop">
     </bean>
 
 
-    <bean id = "com1" class = "org.example.Desktop" primary="true" lazy-init="true">
-    </bean>
+<!--    <bean class = "org.example.Desktop" primary="true" lazy-init="true">-->
+<!--    </bean>-->
 
 <!--    <bean id = "alien" class = "org.example.Alien">-->
 <!--    </bean>-->
