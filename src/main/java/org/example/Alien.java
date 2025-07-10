@@ -1,10 +1,19 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import java.beans.ConstructorProperties;
 
-public class Alien {
 
+@Component
+public class Alien {
+    @Value("34")
     private int age;
+//    @Autowired
+//    @Qualifier("com123")
     private Computer com;
 
     public Alien() {
@@ -34,6 +43,8 @@ public class Alien {
         return com;
     }
 
+    @Autowired
+    @Qualifier("com123")
     public void setCom(Computer com) {
         this.com = com;
     }
